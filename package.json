@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "serve": "^14.2.5",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && serve"
+  }
+}
