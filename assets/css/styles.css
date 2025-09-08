@@ -4,27 +4,5 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
   padding: 20px;
-  transition: transform 0.1s;
-  transform-style: preserve-3d; /* Ensures 3D transforms work */
   width: 250px;
-}
-
-.card:hover::after {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  content: "";
-  height: 20px;
-  pointer-events: none;
-  position: absolute;
-  transform: translate(var(--mouse-x), var(--mouse-y));
-  width: 20px;
-}
-
-.card-container {
-  display: inline-block;
-  perspective: 1000px; /* Creates a 3D space */
-}
-
-.card:hover {
-  cursor: pointer;
 }
