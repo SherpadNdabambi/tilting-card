@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cards: NodeListOf<HTMLElement> = document.querySelectorAll(".card");
-  // Create and style the highlight circle
+  const cards: NodeListOf<HTMLElement> =
+    document.querySelectorAll(".tilting-card");
   cards.forEach((card) => {
+    // Create card container to create 3D space
+    const container = document.createElement("div");
+    container.classList.add("tilting-card-container");
+
+    // Replace card with container and append card to container
+    card.replaceWith(container);
+    container.appendChild(card);
+
     card.addEventListener("mousemove", (e: MouseEvent) => {
       const rect: DOMRect = card.getBoundingClientRect();
       const centerX: number = rect.left + rect.width / 2;

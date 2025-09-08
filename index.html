@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tilting Card</title>
+    <title>Tilting Card Documentation</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./dist/scripts.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.css"
+    />
+    <script src="https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.js"></script>
   </head>
   <body>
-    <div class="card-container">
-      <div class="card">
-        <h3>Tilting Card</h3>
-        <p>
-          JavaScript calculates the mouse position relative to the card's center
-          and uses CSS transforms rotateX and rotateY to tilt the card.
-        </p>
-      </div>
+    <h1>How to Use</h1>
+    <p>
+      Apply the <code>.tilting-card-init</code> class to any element to
+      initialize a tilting card.
+    </p>
+    <div class="card highlight-circle tilting-card">
+      <h3>Tilting Card</h3>
+      <p>
+        JavaScript calculates the mouse position relative to the card's center
+        and uses CSS transforms rotateX and rotateY to tilt the card.
+      </p>
     </div>
   </body>
 </html>
