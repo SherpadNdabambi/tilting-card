@@ -1,28 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tilting Card Documentation</title>
+
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.css"
     />
+
+    <link rel="stylesheet" href="./assets/css/code-snippet.css" />
+
     <script src="https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.js"></script>
+
+    <script src="./dist/code-snippet.js"></script>
   </head>
+
   <body>
-    <h1>How to Use</h1>
+    <h1>Tilting Card Documentation</h1>
+
+    <h2>Getting Started</h2>
+
+    <p>To start using the tilting card module, follow these simple steps.</p>
+
+    <h2>Setting Up</h2>
+
     <p>
-      Apply the <code>.tilting-card-init</code> class to any element to
-      initialize a tilting card.
+      1. Add the following lines to your HTML file to include the CSS and JS
+      files:
     </p>
-    <div class="card highlight-circle tilting-card">
-      <h3>Tilting Card</h3>
-      <p>
-        JavaScript calculates the mouse position relative to the card's center
-        and uses CSS transforms rotateX and rotateY to tilt the card.
-      </p>
+
+    <pre class="code-snippet">
+&lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet"</span> <span class="orange">href</span>=<span class="green">"https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.css"</span>/>
+&lt<span class="red">script</span> <span class="orange">src</span>=<span class="green">"https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.js"</span>>&lt/<span class="red">script</span>></pre>
+
+    <h2>Usage</h2>
+
+    <p>
+      1. Add the <code>tilting-card</code> class to any container element in
+      your HTML where you want the tilting card effect to appear. For example:
+    </p>
+
+    <h2>Usage Example</h2>
+
+    <div class="code-snippet-container">
+      <div class="tab-links">
+        <span class="active tab-link" data-tab="lang-html">HTML</span>
+        <span class="tab-link" data-tab="lang-css">CSS</span>
+      </div>
+
+      <div class="code-snippet-window">
+        <pre class="active code-snippet lang-html">
+&lt<span class="red">head</span>>
+
+  &lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet"</span> <span class="orange">href</span>=<span class="green">"./assets/css/styles.css"</span> />
+
+  &lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet" href="https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.css"</span> />
+
+  &lt<span class="red">script</span> <span class="orange">src</span>=<span class="green">"https://github.com/sherpadndabambi/tilting-card/releases/download/1.0.0/tilting-card.js"</span>>&lt/<span class="red">script</span>>
+
+&lt/<span class="red">head</span>>
+
+&lt<span class="red">body</span>>
+
+  &lt<span class="red">div</span> <span class="orange">class</span>=<span class="green">"card highlight-circle tilting-card"</span>>
+
+    &lt<span class="red">h3</span>>Tilting Card&lt/<span class="red">h3</span>>
+
+    &lt<span class="red">p</span>>
+      JavaScript calculates the mouse position relative to the card's
+      center and uses CSS transforms rotateX and rotateY to tilt the card.
+    &lt/<span class="red">p</span>>
+
+  &lt/<span class="red">div</span>>
+
+&lt/<span class="red">body</span>></pre>
+        <pre class="code-snippet lang-css">
+<span class="orange">.card</span> {
+  background: <span class="yellow">rgb</span>(<span class="blue">44</span><span class="orange">,</span><span class="blue">62</span><span class="orange">,</span><span class="blue">80</span>);
+  border-radius: <span class="blue">10</span><span class="orange">px</span>;
+  box-shadow: <span class="blue">0</span> <span class="blue">4</span><span class="orange">px</span> <span class="blue">8</span><span class="orange">px</span> <span class="yellow">rgba</span>(<span class="blue">0</span>, <span class="blue">0</span>, <span class="blue">0</span>, <span class="blue">0.2</span>);
+  color: <span class="orange">#fff</span>;
+  padding: 20<span class="orange">px</span>;
+  width: 250<span class="orange">px</span>;
+}</pre>
+
+        <div class="code-snippet-result">
+          <div class="card highlight-circle tilting-card">
+            <h3>Tilting Card</h3>
+
+            <p>
+              JavaScript calculates the mouse position relative to the card's
+              center and uses CSS transforms rotateX and rotateY to tilt the
+              card.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,115 @@
+.blue {
+  color: rgb(136, 222, 253);
+}
+
+code {
+  background-color: rgb(129, 139, 152);
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+}
+
+.code-snippet {
+  background-color: rgb(34, 41, 47);
+  color: rgb(145, 148, 155);
+  cursor: text;
+  margin: 0;
+  padding: 16px;
+  position: relative;
+}
+
+.code-snippet::after {
+  background-color: rgb(145, 148, 155);
+  border-radius: 5px;
+  color: rgb(34, 41, 47);
+  content: "🗐";
+  padding: 0.35em 0.4em 0 0.45em;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.code-snippet-container {
+  border: 1px solid rgb(199, 204, 208);
+  border-radius: 5px;
+}
+
+.code-snippet:not(.code-snippet-window .code-snippet) {
+  overflow-x: scroll;
+}
+
+.code-snippet-result {
+  padding: 16px;
+}
+
+.code-snippet-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-snippet-window .code-snippet {
+  border-bottom-left-radius: 5px;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+}
+
+.code-snippet-window .code-snippet:not(.active) {
+  display: none;
+}
+
+.green {
+  color: rgb(84, 203, 131);
+}
+
+.orange {
+  color: rgb(217, 152, 97);
+}
+
+.red {
+  color: rgb(196, 92, 99);
+}
+
+.tab-link {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.tab-link.active {
+  border: 1px solid rgb(199, 204, 208);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  cursor: not-allowed;
+  padding: 8px;
+}
+
+.tab-link:not(.active):hover {
+  border: 1px dashed rgb(199, 204, 208);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  opacity: 80%;
+}
+
+.tab-links {
+  border-bottom: 1px solid rgb(199, 204, 208);
+  margin: 8px 0;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+.yellow {
+  color: rgb(252, 233, 121);
+}
+
+@media only screen and (min-width: 769px) {
+  .code-snippet-container {
+    height: 80vh;
+  }
+
+  .code-snippet-window {
+    flex-direction: row;
+    height: calc(100% - 43px);
+  }
+
+  .code-snippet-window .code-snippet {
+    flex: 1;
+  }
+}
