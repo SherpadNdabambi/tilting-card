@@ -8,15 +8,11 @@ code {
   padding: 0.2em 0.4em;
 }
 
-.code-snippet {
-  background-color: rgb(34, 41, 47);
-  color: rgb(145, 148, 155);
-  cursor: text;
-  margin: 0;
-  padding: 16px;
+.code-editor {
   position: relative;
 }
 
+.code-editor::after,
 .code-snippet::after {
   background-color: rgb(145, 148, 155);
   border-radius: 5px;
@@ -28,13 +24,17 @@ code {
   top: 5px;
 }
 
+.code-snippet {
+  background-color: rgb(34, 41, 47);
+  border: 1px solid rgb(199, 204, 208);
+  border-radius: 5px;
+  padding-top: 8px;
+  position: relative;
+}
+
 .code-snippet-container {
   border: 1px solid rgb(199, 204, 208);
   border-radius: 5px;
-}
-
-.code-snippet:not(.code-snippet-window .code-snippet) {
-  overflow-x: scroll;
 }
 
 .code-snippet-result {
@@ -48,12 +48,20 @@ code {
 
 .code-snippet-window .code-snippet {
   border-bottom-left-radius: 5px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   white-space: pre-wrap;
 }
 
-.code-snippet-window .code-snippet:not(.active) {
+.code-snippet-window .code-editor:not(.active) {
   display: none;
+}
+
+.CodeMirror {
+  height: 100%;
+}
+
+.CodeMirror-hscrollbar {
+  left: 0 !important;
 }
 
 .green {
@@ -109,7 +117,7 @@ code {
     height: calc(100% - 43px);
   }
 
-  .code-snippet-window .code-snippet {
-    flex: 1;
+  .code-snippet-window .code-editor {
+    width: calc(100% - 322px);
   }
 }
