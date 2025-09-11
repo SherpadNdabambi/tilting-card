@@ -15,7 +15,43 @@
       href="https://cdn.jsdelivr.net/gh/sherpadndabambi/tilting-card@v1.0.0/assets/css/tilting-card.css"
     />
 
+    <!-- CodeMirror core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/lib/codemirror.css"
+      rel="stylesheet"
+    />
+
+    <!-- CodeMirror Dracula theme -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/theme/dracula.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/css/code-snippet.css" />
+
+    <!-- CodeMirror core editor -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/lib/codemirror.js"
+    ></script>
+
+    <!-- CodeMirror HTML highlighing won't work without this -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/mode/xml/xml.js"
+    ></script>
+
+    <!-- CodeMirror HTML highlighting -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/mode/htmlmixed/htmlmixed.js"
+    ></script>
+
+    <!-- CodeMirror CSS highlighting -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/codemirror@5.63.3/mode/css/css.js"
+    ></script>
 
     <script src="https://github.com/sherpadndabambi/tilting-card/releases/download/v1.0.0/tilting-card.js"></script>
 
@@ -36,9 +72,7 @@
       files:
     </p>
 
-    <pre class="code-snippet">
-&lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet"</span> <span class="orange">href</span>=<span class="green">"https://cdn.jsdelivr.net/gh/sherpadndabambi/tilting-card@v1.0.0/assets/css/tilting-card.css"</span>/>
-&lt<span class="red">script</span> <span class="orange">src</span>=<span class="green">"https://github.com/sherpadndabambi/tilting-card/releases/download/v1.0.0/tilting-card.js"</span>>&lt/<span class="red">script</span>></pre>
+    <div class="code-snippet"></div>
 
     <h2>Usage</h2>
 
@@ -56,40 +90,8 @@
       </div>
 
       <div class="code-snippet-window">
-        <pre class="active code-snippet lang-html">
-&lt<span class="red">head</span>>
-
-  &lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet"</span> <span class="orange">href</span>=<span class="green">"./assets/css/styles.css"</span> />
-
-  &lt<span class="red">link</span> <span class="orange">rel</span>=<span class="green">"stylesheet" href="https://cdn.jsdelivr.net/gh/sherpadndabambi/tilting-card@v1.0.0/assets/css/tilting-card.css"</span> />
-
-  &lt<span class="red">script</span> <span class="orange">src</span>=<span class="green">"https://github.com/sherpadndabambi/tilting-card/releases/download/v1.0.0/tilting-card.js"</span>>&lt/<span class="red">script</span>>
-
-&lt/<span class="red">head</span>>
-
-&lt<span class="red">body</span>>
-
-  &lt<span class="red">div</span> <span class="orange">class</span>=<span class="green">"card highlight-circle tilting-card"</span>>
-
-    &lt<span class="red">h3</span>>Tilting Card&lt/<span class="red">h3</span>>
-
-    &lt<span class="red">p</span>>
-      JavaScript calculates the mouse position relative to the card's
-      center and uses CSS transforms rotateX and rotateY to tilt the card.
-    &lt/<span class="red">p</span>>
-
-  &lt/<span class="red">div</span>>
-
-&lt/<span class="red">body</span>></pre>
-        <pre class="code-snippet lang-css">
-<span class="orange">.card</span> {
-  background: <span class="yellow">rgb</span>(<span class="blue">44</span><span class="orange">,</span><span class="blue">62</span><span class="orange">,</span><span class="blue">80</span>);
-  border-radius: <span class="blue">10</span><span class="orange">px</span>;
-  box-shadow: <span class="blue">0</span> <span class="blue">4</span><span class="orange">px</span> <span class="blue">8</span><span class="orange">px</span> <span class="yellow">rgba</span>(<span class="blue">0</span>, <span class="blue">0</span>, <span class="blue">0</span>, <span class="blue">0.2</span>);
-  color: <span class="orange">#fff</span>;
-  padding: 20<span class="orange">px</span>;
-  width: 250<span class="orange">px</span>;
-}</pre>
+        <div class="active code-editor lang-html"></div>
+        <div class="code-editor lang-css"></div>
 
         <div class="code-snippet-result">
           <div class="card highlight-circle tilting-card">
@@ -97,12 +99,16 @@
 
             <p>
               JavaScript calculates the mouse position relative to the card's
-              center and uses CSS transforms rotateX and rotateY to tilt the
-              card.
+              center and uses CSS transforms rotateX and rotateY to tilt
+              thecard.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>&copy; Sherpad Ndabambi 2025.</p>
+    </footer>
   </body>
 </html>
