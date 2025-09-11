@@ -19,10 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
   width: 250px;
 }`,
   });
+
+  const codeSnippet: HTMLDivElement = document.querySelector(".code-snippet"),
+    htmlTab: HTMLDivElement = document.querySelector(".lang-html");
   // @ts-expect-error
   CodeMirror(codeSnippet, {
     lineNumbers: true,
     mode: "htmlmixed",
+    readOnly: true,
     theme: "dracula",
     value: `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sherpadndabambi/tilting-card@v1.0.0/assets/css/tilting-card.css"/>
 <script src="https://github.com/sherpadndabambi/tilting-card/releases/download/v1.0.0/tilting-card.js"></script>`,
